@@ -3,11 +3,13 @@
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
+    "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
+    "target": "ES6",
     "sourceMap": true,
+    "strict": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
@@ -17,5 +19,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
