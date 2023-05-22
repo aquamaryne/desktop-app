@@ -17,7 +17,7 @@ const createWindow = () => {
   });
 
   mainWindow.setMenuBarVisibility(false);
-  mainWindow.loadURL('http://localhost:3001');
+  mainWindow.loadURL('http://localhost:3000');
 };
 
 // This method will be called when Electron has finished
