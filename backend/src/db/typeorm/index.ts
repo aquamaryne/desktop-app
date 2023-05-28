@@ -1,11 +1,10 @@
-/* eslint-disable prettier/prettier */
 import { User } from "./user.entity";
-import { Armour } from "./type.entity";
+import { Item } from "./item.entity";
 
 const entities = [
     User, 
-    Armour
+    Item
 ];
 
-export { User, Armour }
+export { User, Item }
 export default entities;
