@@ -6,12 +6,12 @@ import { DatabasesController } from './database/databases.controller';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: '',
-      host: '',
+      type: 'mysql',
+      host: 'localhost',
       port: 3306,
-      username: '',
-      password: '',
-      database: '',
+      username: 'root',
+      password: 'toor',
+      database: 'projecttwo',
       entities: [],
       synchronize: true,
     }),
