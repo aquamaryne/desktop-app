@@ -1,8 +1,7 @@
 {
-  "name": "electron-app",
-  "productName": "electron-app",
+  "name": "DeadNET",
+  "productName": "DeadNET",
   "version": "1.0.0",
-  "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -13,8 +12,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "n00k1e",
-    "email": "plotnikoff1488@gmail.com"
+    "name": "n00k1e"
   },
   "license": "MIT",
   "dependencies": {
