@@ -1,4 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from "typeorm";
+import { User } from "./user.entity";
+import { ChatRoom } from "./chats.entity";
 
 @Entity()
 export class ChatUser{
@@ -7,4 +9,10 @@ export class ChatUser{
 
     @Column()
     name: string;
+
+    @ManyToOne(() => User, user => user.chatRoom)
+    user: User;
+
+    @ManyToOne(() => ChatRoom, chatRoom => chatRoom.members)
+    chatRoom: ChatRoom;
 }
