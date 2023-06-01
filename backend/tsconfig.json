@@ -20,6 +20,6 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
-  "include": ["src", "database"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

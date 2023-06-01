@@ -1,4 +1,11 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Post } from '@nestjs/common';
 
-@Controller('databases')
-export class DatabasesController {}
+@Controller('users')
+export class UsersController {
+
+}
+
+@Controller('messages')
+export class UserMessages{
+
+}
