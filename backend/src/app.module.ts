@@ -1,11 +1,14 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserMessages, UsersController } from './database/databases.controller';
-import { DbConnect } from './database/dto';
+import { DbConnect } from '.';
+import { UserService } from './user/user.service';
+import { UserRepositoryModule } from './user/user.module';
+import { UserRepository } from './user/user.repository';
+
 @Module({
-  imports: [DbConnect],
-  controllers: [AppController, UsersController, UserMessages],
-  providers: [AppService],
+  imports: [UserRepository, DbConnect, UserRepositoryModule],
+  controllers: [AppController],
+  providers: [AppService, UserService],
 })
 export class AppModule {}
