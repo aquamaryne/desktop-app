@@ -4,9 +4,6 @@ import { Message } from "./message.entity";
 
 @Entity()
 export class User{
-    save() {
-        throw new Error("Method not implemented.");
-    }
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -25,4 +22,5 @@ export class User{
     @OneToMany(() => Message, message => message.user)
     message: Message[];
     username: string;
+    save: any;
 }
