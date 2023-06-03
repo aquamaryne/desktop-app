@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../css/register.css";
+import TextSett from './art';
 
 export default function RegisterForm(){
     const[formData, setFormData] = useState({
@@ -35,23 +36,43 @@ export default function RegisterForm(){
 
     return(
         <form onSubmit={handleSubmit}>
-            <label id='deadnet'> DeadNET </label>
+            <label id='deadnet'> 
+                <TextSett text={"DeadNET"} font={"Bloody"} /> 
+            </label> 
             <div className="form-item">
-                <label htmlFor='name'>Name</label>
+                <label htmlFor='name'>[Name]</label>
                 <div className='input-wrapper'>
-                    <input type='text' id="name" name='name' value={formData.name} onChange={handleChange}/>
+                    <input 
+                        type='text' 
+                        id="name" 
+                        name='name' 
+                        value={formData.name} 
+                        onChange={handleChange}
+                    />
                 </div>
             </div>
             <div className="form-item">
-                <label htmlFor='email'>Email</label>
+                <label htmlFor='email'>[Email]</label>
                 <div className='input-wrapper'>
-                    <input type='email' id="email" name='email' value={formData.email} onChange={handleChange}/>
+                    <input 
+                        type='email' 
+                        id="email" 
+                        name='email' 
+                        value={formData.email} 
+                        onChange={handleChange}
+                    />
                 </div>
             </div>
             <div className='input-wrapper'>
-                <label htmlFor='password'>Password</label>
+                <label htmlFor='password'>[Password]</label>
                 <div className='input-wrapper'>
-                    <input type='password' id="password" name='password' value={formData.password} onChange={handleChange}/>
+                    <input 
+                        type='password' 
+                        id="password" 
+                        name='password' 
+                        value={formData.password} 
+                        onChange={handleChange}
+                    />
                 </div>
             </div>
             <button type="submit" className='glitch-button'>Submit</button>

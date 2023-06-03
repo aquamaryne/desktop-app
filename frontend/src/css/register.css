@@ -2,13 +2,6 @@
   --spacer: 1rem;
 }
 
-.cursor{
-  width: 10px;
-  height: 20px;
-  background-color: #61DE2A;
-  animation: blink 1s infinite;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -21,25 +14,19 @@ body {
   background-color: #1f1f1f;
 }
 
-.falling-object{
-  position: absolute;
-  top: -10px;
-  left: calc(50% - 5px);
-  font-size: 2rem;
-  color: #61DE2A;
-  animation: falling-animation 5s linear infinite;
-}
 
 #deadnet{
-  font-size: 3rem;
-  margin-bottom: 3rem;
+  color: #550055;
+  font-size: 1rem;
   text-shadow: 
-    1px 1px 1px rgba(97, 222, 42, 0.8),
-    2px 2px 2px rgba(97, 222, 42, 0.8),
-    3px 3px 3px rgba(97, 222, 42, 0.8),
-    4px 4px 4px rgba(97, 222, 42, 0.8),
-    5px 5px 5px rgba(0, 0, 0, 0.8);
+        1px 1px 1px #880808,
+        2px 2px 2px #880808,
+        3px 3px 3px #880808,
+        4px 4px 4px #880808,
+        5px 5px 5px #880808,
+        6px 6px 6px #880808;
 }
+
 form{
   display: flex;
   flex-direction: column;
@@ -47,16 +34,8 @@ form{
   margin-bottom: 5rem;
 }
 
-/* * :not(input, button) {
-  background-color: #1f1f1f;
-} */
-
-input{
-  margin-bottom: 0.5rem;
-}
-
 #password{
-  color: black;
+  color: #61DE2A;
 }
 
 label{
@@ -65,8 +44,8 @@ label{
   font-family: 'Pixel Operator SC';
 }
 
-
 input{
+  margin-bottom: 0.5rem;
   font-family: 'Pixel Operator SC';
   color: #61DE2A;
   border-radius: 0.2rem;
@@ -74,7 +53,8 @@ input{
   font-size: 1.5rem;
   padding: 0.5;
   transition: all 0.3s ease;
-  background-color: #324;
+  background-color: #18453b;
+  cursor: text;
 }
 
 
@@ -107,6 +87,7 @@ button{
   border-radius: 0.2rem;
   border-color: #1f1f1f;
   transition: all 0.3s ease;
+  animation: sending-animation 1s infinite;
 }
 
 button:hover,
@@ -187,5 +168,16 @@ button:not(:focus):not(:active){
 @keyframes blink {
   50%{
     opacity: 0;
+  }
+}
+
+@keyframes sending-animation {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%);
   }
 }
