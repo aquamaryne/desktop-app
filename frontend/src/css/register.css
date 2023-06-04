@@ -16,7 +16,7 @@ body {
 
 
 #deadnet{
-  color: #550055;
+  color: #ffffd7;
   font-size: 1rem;
   text-shadow: 
         1px 1px 1px #880808,
@@ -24,7 +24,9 @@ body {
         3px 3px 3px #880808,
         4px 4px 4px #880808,
         5px 5px 5px #880808,
-        6px 6px 6px #880808;
+        6px 6px 6px #880808,
+        7px 7px 7px #880808,
+        8px 8px 8px #880808;
 }
 
 form{
@@ -50,7 +52,7 @@ input{
   color: #61DE2A;
   border-radius: 0.2rem;
   border-color: #1f1f1f;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   padding: 0.5;
   transition: all 0.3s ease;
   background-color: #18453b;
@@ -79,7 +81,7 @@ input:active{
 
 button{
   font-family: 'Pixel Operator SC';
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   padding: 0.2rem 5.2rem;
   margin-top: 0.5rem;
   color: #1f1f1f;

@@ -1,25 +1,25 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { IsNotEmpty, IsEmail, MinLength } from 'class-validator';
 import { ChatUser } from "./chat.entity";
 import { Message } from "./message.entity";
 
 @Entity()
 export class User{
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('increment')
     id: number;
 
-    @Column({ 
-        nullable: true
-    })
+    @Column({ nullable: true })
+    @IsNotEmpty()
     name: string;
 
-    @Column({ 
-        nullable: true
-    })
+    @Column({ nullable: true })
+    @IsNotEmpty()
+    @IsEmail()
     email: string;
     
-    @Column({ 
-        nullable: true
-    })
+    @Column({ nullable: true })
+    @IsNotEmpty()
+    @MinLength(8)
     password: string;
 
     @OneToMany(() => ChatUser, chatUser => chatUser.user)

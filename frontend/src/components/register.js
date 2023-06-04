@@ -75,7 +75,7 @@ export default function RegisterForm(){
                     />
                 </div>
             </div>
-            <button type="submit" className='glitch-button'>Submit</button>
+            <button type="submit" className='glitch-button'>Register</button>
         </form>
     )
 }
