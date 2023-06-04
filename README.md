@@ -26,4 +26,6 @@ This app is built using the following technologies:
 
 
 ## Photos
+Here you can see some photos:
+       
        ![изображение](https://github.com/aquamaryne/desktop-app/assets/67910638/0b6eed85-cbc1-4671-b064-9837a0e1267d)
