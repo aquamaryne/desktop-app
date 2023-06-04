@@ -24,6 +24,6 @@ This app is built using the following technologies:
 3. Software Framework: Electron
 4. Database: MySQL
 
-       
-#Photos:
+
+## Photos
        ![изображение](https://github.com/aquamaryne/desktop-app/assets/67910638/ee3d7393-b984-474e-91a0-aecbdf780967)
