@@ -9,29 +9,63 @@ export default function RegisterForm(){
         password: '',
     });
 
+    const [errors, setErrors] = useState({});
+
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
     };
 
+    const isValidEmail = (value) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+    const validateForn = () => {
+        const validationError = {};
+
+        if(!formData.name){
+            return "Name is required";
+        };
+        
+        if(!formData.email){
+            validationError.email = "Email is required";
+        } else if(!isValidEmail(formData.email)){
+            validationError.email = "Invalid email address";
+        };
+
+        if(!formData.password){
+            validationError.password = "Password is required";
+        } else if(formData.password.length < 8){
+            validationError.password = "Password must be at least 8 symbols";
+        };
+
+        return validationError;
+    }
+
     const handleSubmit = async(e) => {
         e.preventDefault();
-        try{
-            const res = await fetch('http://localhost:3001/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
 
-            if(res.ok){
-                console.log('User created');
-            } else {
-                console.log('Failted to create');
+        const validationErrors = validateForn();
+        if(Object.keys(validationErrors).length === 0){
+            try{
+                const res = await fetch('http://localhost:3001/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+    
+                if(res.ok){
+                    console.log('User created');
+                } else {
+                    console.log('Failted to create user');
+                }
+            } catch(error){
+                console.error('Error', error)
             }
-        } catch(error){
-            console.error('Error', error)
+        } else {
+            setErrors(validationErrors) 
         }
+        
     };
 
     return(
@@ -50,6 +84,7 @@ export default function RegisterForm(){
                         onChange={handleChange}
                     />
                 </div>
+                {errors.name && <div className='error'>{errors.name}</div>}
             </div>
             <div className="form-item">
                 <label htmlFor='email'>[Email]</label>
@@ -62,6 +97,7 @@ export default function RegisterForm(){
                         onChange={handleChange}
                     />
                 </div>
+                {errors.email && <div className='error'>{errors.email}</div>}
             </div>
             <div className='input-wrapper'>
                 <label htmlFor='password'>[Password]</label>
@@ -74,6 +110,7 @@ export default function RegisterForm(){
                         onChange={handleChange}
                     />
                 </div>
+                {errors.password && <div className='error'>{errors.password}</div>}
             </div>
             <button type="submit" className='glitch-button'>Register</button>
         </form>
