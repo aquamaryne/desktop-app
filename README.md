@@ -25,5 +25,5 @@ This app is built using the following technologies:
 4. Database: MySQL
 
        
-#Photos
-       1. (https://github.com/aquamaryne/desktop-app/assets/67910638/2cb9a719-4397-4adb-a250-956c1f6e358b)
+#Photos:
+       ![изображение](https://github.com/aquamaryne/desktop-app/assets/67910638/ee3d7393-b984-474e-91a0-aecbdf780967)
