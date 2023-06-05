@@ -17,7 +17,8 @@ export default function RegisterForm(){
 
     const isValidEmail = (value) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    }
+    };
+
     const validateForn = () => {
         const validationError = {};
 
@@ -39,7 +40,7 @@ export default function RegisterForm(){
 
         return validationError;
     }
-
+    
     const handleSubmit = async(e) => {
         e.preventDefault();
 

@@ -8,12 +8,12 @@ import { Message } from "./types/message.entity";
 @Module({
     imports: [
         TypeOrmModule.forRoot({
-            type: 'mysql',
-            host: 'localhost',
+            type: '',
+            host: '',
             port: 3306,
-            username: 'root',
-            password: 'toor',
-            database: 'projecttwo',
+            username: '',
+            password: '',
+            database: '',
             entities: [
                 User, 
                 ChatRoom, 
