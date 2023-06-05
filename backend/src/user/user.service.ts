@@ -11,5 +11,10 @@ export class UserService {
         const user = this.userRepository.create(userData);
         return this.userRepository.save(user);
     }
+
+    async getUser(id: number): Promise<User>{
+        const user = this.userRepository.findOne({ where: {id} });
+        return user;
+    }
 }
 

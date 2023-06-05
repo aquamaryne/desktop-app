@@ -75,7 +75,7 @@ export default function RegisterForm(){
                 <TextSett text={"DeadNET"} font={"Bloody"} /> 
             </label> 
             <div className="form-item">
-                <label htmlFor='name'>[Name]</label>
+                <label htmlFor='name'>[Username]</label>
                 <div className='input-wrapper'>
                     <input 
                         type='text' 
