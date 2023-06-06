@@ -23,19 +23,19 @@ export default function RegisterForm(){
         const validationError = {};
 
         if(!formData.name){
-            return "Name is required";
+            return "[Name is required]";
         };
         
         if(!formData.email){
-            validationError.email = "Email is required";
+            validationError.email = "[Email is required]";
         } else if(!isValidEmail(formData.email)){
-            validationError.email = "Invalid email address";
+            validationError.email = "[Invalid email address]";
         };
 
         if(!formData.password){
-            validationError.password = "Password is required";
+            validationError.password = "[Password is required]";
         } else if(formData.password.length < 8){
-            validationError.password = "Password must be at least 8 symbols";
+            validationError.password = "[Password must be < 8 symbols]";
         };
 
         return validationError;
@@ -75,7 +75,7 @@ export default function RegisterForm(){
                 <TextSett text={"DeadNET"} font={"Bloody"} /> 
             </label> 
             <div className="form-item">
-                <label htmlFor='name'>[Username]</label>
+                <label htmlFor='name'>[Name]</label>
                 <div className='input-wrapper'>
                     <input 
                         type='text' 

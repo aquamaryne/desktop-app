@@ -14,6 +14,14 @@ body {
   background-color: #1f1f1f;
 }
 
+.error{
+  font-family: 'Pixel Operator SC';
+  color: red;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: -1rem;
+}
+
 #deadnet{
   color: #ffffd7;
   font-size: 1rem;
@@ -25,7 +33,9 @@ body {
         5px 5px 5px #880808,
         6px 6px 6px #880808,
         7px 7px 7px #880808,
-        8px 8px 8px #880808;
+        8px 8px 8px #880808,
+        9px 9px 9px #880808,
+        10px 10px 10px #880808;
 }
 
 form{
@@ -46,7 +56,7 @@ label{
 }
 
 input{
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-family: 'Pixel Operator SC';
   color: #61DE2A;
   border-radius: 0.2rem;
@@ -82,13 +92,12 @@ button{
   font-family: 'Pixel Operator SC';
   font-size: 1.6rem;
   padding: 0.2rem 5.2rem;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   color: #1f1f1f;
   background-color: #61DE2A;
   border-radius: 0.2rem;
   border-color: #1f1f1f;
   transition: all 0.3s ease;
-  animation: sending-animation 1s infinite;
 }
 
 button:hover,
@@ -169,16 +178,5 @@ button:not(:focus):not(:active){
 @keyframes blink {
   50%{
     opacity: 0;
-  }
-}
-
-@keyframes sending-animation {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateX(50%);
   }
 }
