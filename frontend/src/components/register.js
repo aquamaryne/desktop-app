@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../css/register.css";
 import TextSett from './art';
+import { useNavigate } from 'react-router-dom';
 
 export default function RegisterForm(){
     const[formData, setFormData] = useState({
