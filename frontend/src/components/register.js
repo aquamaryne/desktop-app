@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../css/register.css";
 import TextSett from './art';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 export default function RegisterForm(){
     const[formData, setFormData] = useState({
@@ -16,30 +16,22 @@ export default function RegisterForm(){
         setFormData({...formData, [e.target.name]: e.target.value});
     };
 
-    const isValidEmail = (value) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    };
-
     const validateForn = () => {
-        const validationError = {};
+        const errors = {};
 
-        if(!formData.name){
-            return "[Name is required]";
-        };
-        
-        if(!formData.email){
-            validationError.email = "[Email is required]";
-        } else if(!isValidEmail(formData.email)){
-            validationError.email = "[Invalid email address]";
-        };
+        if(formData.name.trim() === ''){
+            errors.name = 'Name is required';
+        }
 
-        if(!formData.password){
-            validationError.password = "[Password is required]";
-        } else if(formData.password.length < 8){
-            validationError.password = "[Password must be < 8 symbols]";
-        };
+        if(formData.email.trim() === ''){
+            errors.email = 'Email is required';
+        }
 
-        return validationError;
+        if(formData.password.trim() === ''){
+            errors.password = 'Password is required';
+        }
+
+        return errors;
     }
     
     const handleSubmit = async(e) => {
