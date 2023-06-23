@@ -3,6 +3,7 @@ import { ApiBearerAuth, ApiSecurity } from '@nestjs/swagger';
 import { UserService } from './user.service';
 import { User } from 'src/types/user.entity';
 
+
 @ApiBearerAuth()
 @ApiSecurity('basic')
 @Controller('users')
