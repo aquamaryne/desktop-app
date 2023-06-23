@@ -3,7 +3,7 @@ import { IsNotEmpty, IsEmail, MinLength } from 'class-validator';
 import  * as bcrypt from 'bcrypt';
 import { ChatUser } from "./chat.entity";
 import { Message } from "./message.entity";
-
+import 'reflect-metadata';
 @Entity()
 export class User{
     @PrimaryGeneratedColumn('increment')
@@ -37,3 +37,4 @@ export class User{
     @OneToMany(() => Message, message => message.user)
     message: Message[];
 }
+

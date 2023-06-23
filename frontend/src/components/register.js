@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import "../css/register.css";
 import TextSett from './art';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function RegisterForm(){
+
+    const navigate = useNavigate();
+
     const[formData, setFormData] = useState({
         name: '',
         email: '',
@@ -50,6 +53,7 @@ export default function RegisterForm(){
     
                 if(res.ok){
                     console.log('User created');
+                    navigate('/mainpage');
                 } else {
                     console.log('Failted to create user');
                 }
