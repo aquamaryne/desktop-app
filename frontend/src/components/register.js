@@ -23,7 +23,7 @@ export default function RegisterForm(){
         const errors = {};
 
         if(formData.name.trim() === ''){
-            errors.name = 'Name is required';
+            errors.name = 'Username is required';
         }
 
         if(formData.email.trim() === ''){
@@ -72,7 +72,7 @@ export default function RegisterForm(){
                 <TextSett text={"DeadNET"} font={"Bloody"} /> 
             </label> 
             <div className="form-item">
-                <label htmlFor='name'>[Name]</label>
+                <label htmlFor='name'>[Username]</label>
                 <div className='input-wrapper'>
                     <input 
                         type='text' 

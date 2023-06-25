@@ -12,7 +12,7 @@ export class UserService {
         return this.userRepository.save(user);
     }
 
-    async getUser(id: number): Promise<User>{
+    async getUser(id: any): Promise<User>{
         const user = await this.userRepository.findOne({ where: {id} });
         return user;
     }
@@ -24,6 +24,16 @@ export class UserService {
             .getMany();
 
         return users;
+    }
+
+    async updateUsername(id: any, username: string){
+        const user = await this.userRepository.findOne(id);
+
+        if(!user){
+            throw new Error('User not found'); 
+        }
+        user.name = username;
+        return this.userRepository.save(user);
     }
 }
 
