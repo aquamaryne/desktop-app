@@ -10,6 +10,9 @@ export class Message{
     @Column()
     content: string;
 
+    @Column()
+    image: string;
+
     @ManyToOne(() => User, user => user.message)
     user: User;
 

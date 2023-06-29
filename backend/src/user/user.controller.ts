@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Param, Get, Put } from '@nestjs/common';
+import { Controller, Post, Body, Param, Get, Put, Delete } from '@nestjs/common';
 import { ApiBearerAuth, ApiSecurity } from '@nestjs/swagger';
 import { ApiTags, ApiResponse, ApiOperation, ApiCreatedResponse } from '@nestjs/swagger';
 import { UserService } from './user.service';
@@ -23,7 +23,7 @@ export class UserController {
     @ApiResponse({ status: 200, description: 'Success' })
     @Get(':id')
     async getUser(@Param('id') id: number): Promise<User>{
-        return this.userService.getUser(id)
+        return this.userService.getUser(id);
     }
 
     @ApiOperation({ summary: 'Update a user' })
@@ -31,5 +31,11 @@ export class UserController {
     @Put(':id/username')
     async updateUser(@Param('id') id: string, @Body('username') user: string){
         return this.userService.updateUsername(id, user);
+    }
+
+    @Get()
+    async getAllUsers(){
+        const user = await this.userService.getAllUsers();
+        return user;
     }
 }

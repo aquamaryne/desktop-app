@@ -6,7 +6,7 @@ import { User } from 'src/types/user.entity';
 @Injectable()
 export class UserService {
     constructor(@InjectRepository(User) private readonly userRepository: Repository<User>) {} 
-    
+
     async createUser(userData: Partial<User>): Promise<User>{
         const user = this.userRepository.create(userData);
         return this.userRepository.save(user);
@@ -15,6 +15,10 @@ export class UserService {
     async getUser(id: any): Promise<User>{
         const user = await this.userRepository.findOne({ where: {id} });
         return user;
+    }
+
+    async getAllUsers(){
+        return this.userRepository.find();
     }
 
     async searchUser(query: string): Promise<User[]>{
