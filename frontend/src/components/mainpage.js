@@ -17,7 +17,7 @@ export default function MainPage(){
         <div>
             <SearchBar />
             {users.map((user) =>  (
-                <li>{user.name}</li>
+                <Card>{user.name}</Card>
             ))}
         </div>
     )
