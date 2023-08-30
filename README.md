@@ -13,7 +13,6 @@
                   ░
        </pre>
 </p>
-<p> 
 
 The DeadNET app is a chat application where users can communicate, create chat rooms, and chat groups. In the next version, more interesting features will be added.
 
