@@ -110,7 +110,9 @@ export default function RegisterForm(){
                 </div>
                 {errors.password && <div className='error'>{errors.password}</div>}
             </div>
-            <button type="submit" className='glitch-button'>Register</button>
+            <button type="submit" className='glitch-button'>
+                Register
+            </button>
         </form>
     )
 }

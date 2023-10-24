@@ -1,11 +1,12 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from "./components/mainpage";
 import RegisterForm from "./components/register";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Router>
+        <MainPage />
         <RegisterForm />
         <Routes>
           <Route path="/register" element={<RegisterForm />} />

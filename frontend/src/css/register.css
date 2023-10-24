@@ -56,37 +56,24 @@ label{
   font-family: 'Pixel Operator SC';
 }
 
+/* redesign */
 input{
+  position: relative;
   margin-bottom: 1rem;
   font-family: 'Pixel Operator SC';
   color: #61DE2A;
-  border-radius: 0.2rem;
-  border-color: #1f1f1f;
+  border-radius: 0.5rem;
+  border-color: #61DE2A;
+  border-style: dashed;
   font-size: 1.65rem;
   padding: 0.5;
   transition: all 0.3s ease;
-  background-color: #18453b;
+  background-color: white;
   cursor: text;
 }
 
-
-input::selection{
-  background-color: #408622;
-}
-
-input:focus,
-button:focus{
-  outline: none;
-}
-
-input:hover,
 input:focus{
-  box-shadow: -3px 3px #1f1f1f, 0 0 10px rgba(97, 222, 42, 0.8)
-}
-
-input:active{
-  transform: translateY(2px);
-  box-shadow: 0 0 20px rgba(97, 222, 42, 0.8);
+  box-shadow: 0 0 10px #61DE2A 0 0 20px #61DE2A;
 }
 
 button{

@@ -6,7 +6,7 @@ import { User } from 'src/types/user.entity';
 
 
 @ApiBearerAuth()
-@ApiTags('user')
+@ApiTags('users')
 @ApiSecurity('basic')
 @Controller('users')
 export class UserController {

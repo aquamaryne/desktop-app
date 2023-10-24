@@ -4,6 +4,7 @@ import { UserRepositoryModule } from './user/user.module';
 import { HealthController } from './health/health.controller';
 import { HealthModule } from './health/health.module';
 import { TerminusModule } from '@nestjs/terminus';
+import { MeessagesController } from './meessages/meessages.controller';
 
 @Module({
   imports: [ 
@@ -12,7 +13,7 @@ import { TerminusModule } from '@nestjs/terminus';
     HealthModule, 
     TerminusModule
   ],
-  controllers: [HealthController],
+  controllers: [HealthController, MeessagesController],
   providers: [],
 })
 export class AppModule {}
