@@ -4,7 +4,7 @@ import { Card } from '@mui/material';
 import { Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import { Grid } from '@mui/material';
-import  axios from 'axios';
+import axios from 'axios';
 
 export default function MainPage(){
 
