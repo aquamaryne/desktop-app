@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  frontend:
+    image: 0271f25158af1cf9e278e13ff90da534b9f25715d1293bf373537d7d3820b797
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    image: 43f4947b5e81ce121a556dbeb4798ceb1b40a814b0d50e4ad10de20066369e2f
+    ports:
+      - "3001:3001"
+    
+  db:
+    image: 710df3a55a61f78f84a1304a322dcddbb0f2cef611d77be2f3a32a8254881180

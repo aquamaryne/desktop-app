@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function SearchBar(){
 
-    const[query, setQuery] = useState('');
+    const[query, setQuery] = useState([]);
     const[searchResult, setSearchEResult] = useState([]);
 
     const handleSearch = async() => {
